@@ -1,12 +1,10 @@
 import streamlit as st
 import pickle
 import  numpy as np
-# lin_reg_model= pickle.load(open('lin_reg_model','rb'))
-# dec_tree_model= pickle.load(open('dec_tree_model','rb'))
 rand_for_model = pickle.load(open('rand_for_model','rb')) 
 
 def predict_price(CRIM,ZN,INDUS,CHAS,NOX,RM,AGE,DIS,RAD,TAX,PTRATIO,B,LSTAT):
-    input = np.array([[CRIM,ZN,INDUS,CHAS,NOX,RM,AGE,DIS,RAD,TAX,PTRATIO,B,LSTAT]])#.astype(np.float64)
+    input = np.array([[CRIM,ZN,INDUS,CHAS,NOX,RM,AGE,DIS,RAD,TAX,PTRATIO,B,LSTAT]])
     price=rand_for_model.predict(input)
     return float(price)
 
@@ -16,12 +14,11 @@ def main():
     html_temp = """
     <div style="background-color:#03396C; padding:10px">
     <h1 style="color:white;text-align:center;">Real Estate Price Predictor</h1>
-    <h2 style="color:white;text-align:center;">Based on a ML Model</h2>
+    <h1 style="color:white;text-align:center;">Based on a ML Model</h1>
 
     """
     st.markdown(html_temp,unsafe_allow_html=True)
-#     activities=['Linear Regression','Decision Tree Regressor','Random Forest Regressor]
-#     option=st.sidebar.selectbox('Which model would you like to use?',activities)
+
 
     CRIM = st.text_input("CRIM - per capita crime rate by town","")
     ZN = st.text_input("ZN - proportion of residential land zoned for lots over  25,000 sq.ft.","")
