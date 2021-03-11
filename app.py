@@ -16,6 +16,7 @@ def main():
     html_temp = """
     <div style="background-color:#03396C; padding:10px">
     <h1 style="color:white;text-align:center;">Real Estate Price Predictor</h1>
+    <h2 style="color:white;text-align:center;">Based on a ML Model</h2>
 
     """
     st.markdown(html_temp,unsafe_allow_html=True)
