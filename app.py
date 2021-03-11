@@ -12,7 +12,7 @@ def predict_price(CRIM,ZN,INDUS,CHAS,NOX,RM,AGE,DIS,RAD,TAX,PTRATIO,B,LSTAT):
 def main():
     #front end elements of web page     
     html_temp = """
-    <div style="background-color:#03396C; padding:10px">
+    <div style="background-color:#1B353D; padding:10px">
     <h1 style="color:white;text-align:center;">Real Estate Price Predictor</h1>
     <h1 style="color:white;text-align:center;">Based on a ML Model</h1>
 
