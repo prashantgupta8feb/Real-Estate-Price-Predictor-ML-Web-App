@@ -10,5 +10,5 @@ The code is written in python3.To run the  application:
 
 1.Download the project 
 2.Install the required dependcies mentioned in the requirements.txt file.
-3.Now, open command prompt in yor project derectory and run the command "streamlit run app.py" 
+3.Now, open command prompt in yor project directory and run the command "streamlit run app.py" 
 
