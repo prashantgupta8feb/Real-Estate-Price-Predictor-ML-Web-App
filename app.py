@@ -4,7 +4,7 @@ import  numpy as np
 rand_for_model = pickle.load(open('rand_for_model','rb')) 
 
 def predict_price(CRIM,ZN,INDUS,CHAS,NOX,RM,AGE,DIS,RAD,TAX,PTRATIO,B,LSTAT):
-    input = np.array([[CRIM,ZN,INDUS,CHAS,NOX,RM,AGE,DIS,RAD,TAX,PTRATIO,B,LSTAT]])
+    input = np.array([[CRIM,ZN,INDUS,CHAS,NOX,RM,AGE,DIS,RAD,TAX,PTRATIO,B,LSTAT]])#.astype(np.float64)
     price=rand_for_model.predict(input)
     return float(price)
 
@@ -12,13 +12,12 @@ def predict_price(CRIM,ZN,INDUS,CHAS,NOX,RM,AGE,DIS,RAD,TAX,PTRATIO,B,LSTAT):
 def main():
     #front end elements of web page     
     html_temp = """
-    <div style="background-color:#1B353D; padding:10px">
-    <h1 style="color:white;text-align:center;">Real Estate Price Predictor</h1>
-    <h1 style="color:white;text-align:center;">Based on a ML Model</h1>
+    <div style="background-color:; padding:10px">
+    <h1 style="color:black;text-align:center;">Real Estate Price Predictor</h1>
 
     """
     st.markdown(html_temp,unsafe_allow_html=True)
-     page_bg_img = '''
+    page_bg_img = '''
     <style>
     body {
     background-image: url("https://www.onthemarket.com/content/wp-content/uploads/2018/01/Housepricepredictions2018lead.jpg");
@@ -50,3 +49,4 @@ def main():
 
 if __name__=='__main__':
     main()
+
