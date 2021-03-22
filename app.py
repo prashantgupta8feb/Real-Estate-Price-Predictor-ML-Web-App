@@ -18,6 +18,15 @@ def main():
 
     """
     st.markdown(html_temp,unsafe_allow_html=True)
+     page_bg_img = '''
+    <style>
+    body {
+    background-image: url("https://www.onthemarket.com/content/wp-content/uploads/2018/01/Housepricepredictions2018lead.jpg");
+    background-size: cover;
+    }
+    </style>
+    '''
+    st.markdown(page_bg_img, unsafe_allow_html=True)
 
 
     CRIM = st.text_input("CRIM - per capita crime rate by town","")
