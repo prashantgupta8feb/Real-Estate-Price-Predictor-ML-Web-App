@@ -3,6 +3,10 @@
 
 This is a web application based on basics of machine learning and developed using streamlit library of python. 
 This application is later on deployed on Heroku.
+[Web Application Live on Heroku](https://realestate-price-predictor-app.herokuapp.com/)
+
+<img src = "Images/Screenshot1.png">
+<img src = "Images/Screenshot 2.png">
 
 ----------------------------------------------Installation--------------------------------------------------------------------- 
 
